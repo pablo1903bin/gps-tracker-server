@@ -5,10 +5,10 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copia el archivo JAR generado al contenedor
-COPY target/app.jar app.jar
+COPY target/gps-tracker-server.jar gps-tracker-server.jar
 
 # Expone el puerto en el que se ejecuta la aplicación
 EXPOSE 5055
 
 # Comando por default
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "gps-tracker-server.jar"]
